@@ -1,0 +1,153 @@
+<% provide(:title, 'Lines') %>
+<h1>Available Over / Unders</h1>
+
+<% if current_user && current_user.admin?%>
+  <div class="container">
+    <%= form_tag toggle_lock_bets_path, method: :put do %>
+
+    <div class="table-responsive">
+      <table class=" table table-hover">
+        <thead>
+          <tr>
+            <% if current_user && current_user.admin?%>
+              <th></th>
+            <% end %>
+            <th>Bet!</th>
+            <th><%= sortable "title", "Team" %></th>
+            <th><%= sortable "benchmark", "Win Total" %></th>
+            <th><%= sortable "locked", "Closed?" %></th>
+            <% if current_user && current_user.admin?%>
+              <th>Admin Action</th>
+            <% end %>
+          </tr>
+      </thead>
+      <tbody>
+          <%= render @bets %>
+      </tbody>
+    </table>
+      <%= submit_tag "Toggle Lock Checked", class: "btn btn-success" %>
+    <% end %>
+  </div>
+</div>
+
+<% else %>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class=" table table-hover">
+    <thead>
+      <tr>
+        <% if current_user && current_user.admin?%>
+          <th></th>
+        <% end %>
+        <th>Bet!</th>
+        <th><%= sortable "title", "Team" %></th>
+        <th><%= sortable "benchmark", "Win Total" %></th>
+        <th><%= sortable "locked", "Closed?" %></th>
+        <% if current_user && current_user.admin?%>
+          <th>Admin Action</th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @bets %>
+    </tbody>
+    </table>
+  </div>
+</div>
+
+<% end %>
+
+<!-- below here is the create new form -->
+
+<br>
+
+
+
+<div class="container">
+  <% if current_user && current_user.admin? %>
+    <h3>Create New Bet</h3>
+      <%= form_for(@bet, :html => {:class => 'form-inline'} ) do |f|%>
+        <div class="form-group">
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </div>
+        <div class="form-group">
+          <%= f.label :benchmark %>
+          <%= f.number_field :benchmark, :step => 0.5 %>
+        </div>
+        <div class="form-group">
+          <%= f.label :locked? %>
+          <%= f.select :locked, [["Yes", true], ["No", false]] %>
+        </div>
+        <br>
+        <div class="form-group">
+          <%= f.submit "Create new bet", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+  <% end %>
+</div>
+
+<!-- below here is just a copy of the user picks section -->
+
+<div class="container">
+  <h3><%=@user.name%>'s Picks:</h3>
+  <div class="row">
+    <div class="col-xs-6">
+    <% if @user.picks.any? %>
+    <div class="well"><strong>Total Picks:</strong><br> (<%= @user.picks.count %> / 10)</div>
+      </div>
+    <div class="col-xs-6">
+    <div class="well"><strong>Super Picks:</strong><br>(<%= @user.picks.where(super: true).count %> / 5)</div>
+  </div>
+  </div>
+</div>
+
+  <div class="table-responsive">
+    <table class=" table table-hover">
+      <thead>
+        <tr>
+          <th><%= "Title" %></th>
+          <th><%= "Benchmark" %></th>
+          <th><%= "Selection" %></th>
+          <th><%= "Locked?" %></th>
+          <th><%= "Value" %></th>
+          <th><%= "Delete?" %></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% @current_user.picks.each do |pick| %>
+
+
+        <tr id="pick-<%= pick.id %>">
+          <td><%= image_tag("#{pick.title}.png", :alt => "icon", :class=> "iconz") %>  <%= pick.title %> </td>
+          <td> <%= pick.benchmark %> </td>
+          <td> <%= pick.selection %> </td>
+
+          <% if pick.locked? %>
+            <td class="danger">Closed</td>
+          <% else %>
+            <td >Open</td>
+          <% end %>
+
+          <% if pick.super? %>
+            <td class="info">Super Bet!</td>
+          <% else %>
+            <td >Regular Bet</td>
+          <% end %>
+
+          <td>
+           <% if !pick.locked? && current_user?(pick.user)%>
+            <%= link_to "delete", pick, class: "btn btn-default", method: :delete, data: { confirm: "You sure?" } %>
+            <% else %>
+             -
+           <% end %>
+          </td>
+        </tr>
+
+          <%end %>
+      </tbody>
+    </table>
+  </div>
+    <% end %>

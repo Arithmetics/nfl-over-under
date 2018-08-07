@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team_name: MyString
+  games_played: 1
+  wins: 1
+  losses: 1
+  win_loss_pct: 1.5
+
+two:
+  team_name: MyString
+  games_played: 1
+  wins: 1
+  losses: 1
+  win_loss_pct: 1.5

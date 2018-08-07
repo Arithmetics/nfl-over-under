@@ -1,0 +1,55 @@
+<% provide(:title, 'Picks') %>
+<h1>Public (Locked) Picks</h1>
+
+<% if current_user && current_user.admin? %>
+ <h3>(You are logged in as admin, so can see all picks)</h3>
+<% end %>
+
+ <div class="table-responsive">
+   <table class=" table table-hover">
+    <thead>
+      <th><%= sortable "user_id"%></th>
+      <th><%= sortable "title"%></th>
+      <th><%= sortable "selection"%></th>
+      <th><%= sortable "super"%></th>
+      <th><%= sortable "benchmark"%></th>
+      <th>Projection</th>
+      <th><%= sortable "locked"%></th>
+    </thead>
+    <tbody>
+      <% @picks.each do |pick| %>
+        <% if pick.locked? || (current_user && current_user.admin?) %>
+        <tr id="pick-<%= pick.id %>">
+          <td><%= @users.find_by_id(pick.user_id).name %></td>
+          <td> <%= image_tag("#{pick.title}.png", :alt => "icon", :class=> "iconz") %> <%= pick.title %> </td>
+          <td> <%= pick.selection %> </td>
+
+          <% if pick.super? %>
+            <td class="info">Super Bet!</td>
+          <% else %>
+            <td >Regular Bet</td>
+          <% end %>
+          <td> <%= pick.benchmark %> </td>
+          <% if pick.projected_win? %>
+            <td class="success">Winning!</td>
+          <% else %>
+            <td class="danger">Losing!</td>
+          <% end %>
+          <% if pick.locked? %>
+            <td class="danger">Closed</td>
+          <% else %>
+            <td >Open</td>
+          <% end %>
+
+
+        </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+
+
+
+
+
+  </table>
+</div>

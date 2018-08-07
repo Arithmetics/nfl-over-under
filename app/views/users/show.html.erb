@@ -1,0 +1,76 @@
+<% provide(:title, @user.name) %>
+
+<div class="container">
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h2><%= @user.name %></h2>
+    </div>
+    <div class="panel-body">
+      <% if @user.picks.count < 10 && @user.picks.where(super: true).count < 5 %>
+        <p> You have less than 10 Total Picks and less than 5 Super Picks! </p>
+        <br>
+        <%= button_to "Pick More Bets Here!", bets_path, :class => "btn btn-success btn-lg btn-block big-dumb-button", :method => :get %>
+        <br>
+      <% elsif @user.picks.count < 10 %>
+        <p> You don't have enough Total Picks! </p>
+        <br>
+        <%= button_to "Pick More Bets Here!", bets_path, :class => "btn btn-success btn-lg btn-block big-dumb-button", :method => :get %>
+        <br>
+      <% elsif @user.picks.where(super: true).count < 5 %>
+        <p> You don't have enough Super Picks! </p>
+        <p> Delete Regular Picks below and then..</p>
+      <% else %>
+        <p> Looks like youre good to go </p>
+      <% end %>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <% if @user.picks.any? %>
+      <div class="well">
+        <strong>Total Picks</strong>:<br> (<%= @user.picks.count %> / 10)
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="well">
+        <strong>Super Picks:</strong><br>(<%= @user.picks.where(super: true).count %> / 5)
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="well">
+        <strong>Projected Score:</strong><br>(<%= @user.projected_points %> / 15)
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="table-responsive">
+    <table class=" table table-hover">
+        <thead>
+          <tr>
+            <th><%= sortable "title","Title" %></th>
+            <th><%= sortable "benchmark", "Over/Under" %></th>
+            <th><%= sortable "selection", "Pick" %></th>
+            <th><%= sortable "locked", "Locked?" %></th>
+            <th><%= sortable "super", "Value" %></th>
+            <th>Status</th>
+            <th><%= "Delete?" %></th>
+          </tr>
+        </thead>
+        <tbody>
+            <%= render @picks %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

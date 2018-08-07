@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+atlanta:
+  title: "Atlanta Hawks"
+  benchmark: 27.5
+  locked: false
+
+celtics:
+  title: "Boston Celtics"
+  benchmark: 53.5
+  locked: false
+
+nets:
+  title: "Brooklyn Nets"
+  benchmark: 26.5
+  locked: false
+
+hornets:
+  title: "Charlotte Hornets"
+  benchmark: 42.5
+  locked: false
+
+bulls:
+  title: "Chicago Bulls"
+  benchmark: 22.5
+  locked: true

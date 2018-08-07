@@ -1,0 +1,48 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+
+atlanta:
+  title: "Atlanta Hawks"
+  benchmark: 27.5
+  locked: false
+  super: false
+  created_at: <%= 10.minutes.ago %>
+  user: michael
+  bet: atlanta
+
+celtics:
+  title: "Boston Celtics"
+  benchmark: 53.5
+  locked: false
+  super: true
+  created_at: <%= 11.minutes.ago %>
+  user: michael
+  bet: celtics
+
+nets:
+  title: "Brooklyn Nets"
+  benchmark: 26.5
+  locked: false
+  super: false
+  created_at: <%= 3.years.ago %>
+  user: michael
+  bet: nets
+
+hornets:
+  title: "Charlotte Hornets"
+  benchmark: 42.5
+  locked: false
+  super: false
+  created_at: <%= 2.hours.ago %>
+  user: michael
+  bet: hornets
+
+bulls:
+  title: "Chicago Bulls"
+  benchmark: 22.5
+  locked: true
+  super: false
+  created_at: <%= Time.zone.now %>
+  user: michael
+  bet: bulls
+  

@@ -1,0 +1,33 @@
+<% if pick.locked? || current_user?(pick.user) || (current_user && current_user.admin?)%>
+<tr id="pick-<%= pick.id %>">
+  <td> <%= image_tag("#{pick.title}.png", :alt => "icon", :class=> "iconz") %> <%= pick.title %> </td>
+  <td> <%= pick.benchmark %> </td>
+  <td> <%= pick.selection.capitalize %> </td>
+
+  <% if pick.locked? %>
+    <td class="danger">Closed</td>
+  <% else %>
+    <td >Open</td>
+  <% end %>
+
+  <% if pick.super? %>
+    <td class="info">Super Bet!</td>
+  <% else %>
+    <td >Regular Bet</td>
+  <% end %>
+
+  <% if pick.projected_win? %>
+    <td class="success">Winning!</td>
+  <% else %>
+    <td class="danger">Losing!</td>
+  <% end %>
+
+  <td>
+   <% if !pick.locked? && current_user?(pick.user)%>
+    <%= link_to "delete", pick, class: "btn btn-default", method: :delete, data: { confirm: "You sure?" } %>
+    <% else %>
+     -
+   <% end %>
+  </td>
+</tr>
+<% end %>

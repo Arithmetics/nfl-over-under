@@ -1,0 +1,65 @@
+<tr>
+  <% if current_user && current_user.admin? %>
+    <td><%= check_box_tag "bet_ids[]", bet.id %></td>
+  <% end %>
+
+  <td>
+    <% if !bet.locked? %>
+      <a class= "btn btn-success" data-toggle="collapse" data-target= "#<%=bet.id%>" >
+        <span class='glyphicon glyphicon-plus-sign'></span>
+      </a>
+    <% end %>
+  </td>
+  <td> <%= image_tag("#{bet.title}.png", :alt => "icon", :class=> "iconz") %> <%= bet.title %> </td>
+  <td> <%= bet.benchmark %> </td>
+
+  <% if bet.locked? %>
+    <td class="danger">Closed</td>
+  <% else %>
+    <td >Open</td>
+  <% end %>
+
+  <% if current_user && current_user.admin? %>
+    <td>
+      <div class="btn-group">
+        <%= link_to "edit", edit_bet_path(bet.id), class: "btn btn-default" %>
+
+      <%= link_to "delete", bet, method: :delete, class: "btn btn-default", data: {confirm: "Confirm" } %>
+
+      </div>
+    </td>
+  <% end %>
+
+</tr>
+
+
+<tr>
+  <td colspan="6">
+  <div id="<%=bet.id%>" class="collapse">
+
+    <%= form_for(@pick, :html => {:class => 'form-group'} ) do |f|%>
+
+      <%= f.hidden_field :title, :value => bet.title %>
+      <%= f.hidden_field :benchmark, :value => bet.benchmark %>
+      <%= f.hidden_field :bet_id, :value => bet.id %>
+      <%= f.hidden_field :locked, :value => bet.locked %>
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+      <div class="form-group">
+        <%= f.label :selection %>
+        <%= f.select(:selection, options_for_select([["Under", "under"], ["Over", "over"]]), {}, {class: "form-control maxim"}) %>
+
+      </div>
+      <div class="form-group">
+        <%= f.label :super? %>
+        <%= f.select(:super, options_for_select([["No", false], ["Yes", true]]), {}, {class: "form-control maxim"}) %>
+      </div>
+      <br>
+      <div class="form-group">
+        <%= f.submit "Commit Pick", class: "btn btn-primary medbutt" %>
+      </div>
+    <% end %>
+
+  </div>
+</td>
+</tr>

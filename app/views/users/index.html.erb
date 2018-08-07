@@ -1,0 +1,26 @@
+<% provide(:title, 'All users') %>
+<h1>Leaderboard</h1>
+
+<div class="table-responsive">
+  <table class=" table table-hover">
+    <thead>
+      <tr>
+        <th>User</th>
+        <th>Pick Count</th>
+        <th>Projected Points</th>
+        <% if current_user && current_user.admin?%>
+          <th>Delete User</th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+        <%= render @users %>
+         <!-- this used to be:
+         <% @users.each do |user| %>
+           <%= render user %>
+         <% end %>
+          but rails magic!
+        -->
+    </tbody>
+  </table>
+</div>

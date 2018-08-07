@@ -1,0 +1,61 @@
+
+ORIGINAL
+
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to "NBA Over / Under Contest",  root_path, id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home"></span>
+          Home
+          <% end %>
+        </li>
+
+
+        <% if logged_in? #sessions_helper %>
+          <li><%= link_to users_path do%>
+            <span class="glyphicon glyphicon-list"></span>
+            Leaderboard
+            <% end %>
+          </li>
+
+          <li><%= link_to picks_path do%>
+            <span class="glyphicon glyphicon-eye-open"></span>
+            Picks
+            <% end %>
+          </li>
+
+          <li><%= link_to bets_path do%>
+            <span class="glyphicon glyphicon-briefcase"></span>
+            Available Bets
+            <% end %>
+          </li>
+
+
+          <li><%= link_to user_path(current_user)  do%>
+            <span class="glyphicon glyphicon-user"></span>
+            Profile
+            <% end %>
+          </li>
+          <li><%= link_to edit_user_path(current_user) do%>
+            <span class="glyphicon glyphicon-cog"></span>
+            Settings
+            <% end %>
+          </li>
+          <li><%= link_to logout_path, method: :delete do%>
+            <span class="glyphicon glyphicon-log-out"></span>
+            Log Out
+            <% end %>
+          </li>
+        <% else %>
+          <li><%= link_to login_path do %>
+            <span class="glyphicon glyphicon-log-in"></span>
+            Log in
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>

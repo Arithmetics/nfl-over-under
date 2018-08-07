@@ -1,0 +1,10 @@
+<tr>
+  <td> <%= link_to user.name, user %> </td>
+  <td> <%= user.picks.count %> </td>
+  <td> <%= user.projected_points %>/15</td>
+  <td>
+  <% if current_user && current_user.admin? %>
+    <%= link_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+  <% end %>
+  <td>
+</tr>

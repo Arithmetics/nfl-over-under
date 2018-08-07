@@ -1,0 +1,6 @@
+<div class="container">
+<h3> Over Picks: </h3>
+<div class="well">
+<%= bar_chart @picks.group(:selection).group(:title).count, height: "1500px"%>
+</div>
+</div>

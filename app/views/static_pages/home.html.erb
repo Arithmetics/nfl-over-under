@@ -1,0 +1,44 @@
+<div class="center jumbotron">
+  <h2>Welcome to the NBA Over / Under Contest</h2>
+
+  <div class="container">
+<% if current_user == nil %>
+  <%= button_to "Create an account", signup_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
+  <br>
+  <br>
+  <%= button_to "Login", login_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
+  <br>
+  <div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>Rules</h3></div>
+  <div class="panel-body">
+    <ol class="list-group">
+      <li class="list-group-item">Pick exactly 10 teams</li>
+      <li class="list-group-item">Specify whether they will go over or under their season total</li>
+      <li class="list-group-item">Pick exactly 5 "Super Bets"</li>
+      <li class="list-group-item">Regular Bets count for one point, Super Bets count for two points</li>
+      <li class="list-group-item">Picks are editable and secret until NBA season begins</li>
+    </ol>
+  </div>
+</div>
+
+<% else %>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h3>Rules</h3></div>
+  <div class="panel-body">
+    <ol class="list-group">
+      <li class="list-group-item">Pick exactly 10 teams</li>
+      <li class="list-group-item">Specify whether they will go over or under their season total</li>
+      <li class="list-group-item">Pick exactly 5 "Super Bets"</li>
+      <li class="list-group-item">Regular Bets count for one point, Super Bets count for two points</li>
+      <li class="list-group-item">Picks are editable and secret until NBA season begins</li>
+      <li class="list-group-item"><%= button_to "Get Started Here!", bets_path, :class => "btn btn-success btn-lg btn-block", :method => :get %></li>
+    </ol>
+  </div>
+</div>
+
+
+<% end %>

@@ -1,0 +1,64 @@
+<div class="container">
+  <% @teams.each do |team| %>
+
+        <div class="col-md-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <% if team[0] %>
+                <h3>
+                  <%= image_tag("#{team[0].team_name}.png", :alt => "icon", :class=> "iconx") %>
+                  <%= team[0].team_name %>
+                </h3>
+              <% end %>
+            <ul class="nav nav-pills" role="tablist">
+              <li role="presentation">
+                Win Target
+                 <span class="badge">
+                   <% if team[0] %>
+                     <%= @bets.find_by_title(team[0].team_name).benchmark %>
+                   <% end %>
+                 </span>
+               </li>
+              <li role="presentation">Profile</li>
+              <li role="presentation">Messages <span class="badge">3</span></li>
+            </ul>
+          </div>
+              <div class="panel-body">
+                <%= line_chart team.group(:games_played).sum(:win_loss_pct), discrete: true, min: 0, max: 1 %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+  <% end %>
+</div>
+
+
+
+<!--
+<div class="container">
+  <div class="table-responsive">
+    <table class=" table table-hover">
+      <tr>
+        <th>Team Name</th>
+        <th>Games Played</th>
+        <th>Wins</th>
+        <th>Losses</th>
+        <th>Win %</th>
+        <th>Created At</th>
+      </tr>
+      <% @standings.each do |standing| %>
+        <tr>
+          <td><%= standing.team_name %></td>
+          <td><%= standing.games_played %></td>
+          <td><%= standing.wins %></td>
+          <td><%= standing.losses %></td>
+          <td><%= standing.win_loss_pct %></td>
+          <td><%= standing.created_at %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+-->

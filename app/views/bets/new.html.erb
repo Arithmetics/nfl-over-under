@@ -1,0 +1,20 @@
+<% provide(:title, "Add bet") %>
+<h1>Add a bet</h1>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@bet) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :benchmark %>
+      <%= f.number_field :benchmark, :step => 0.5 %>
+
+      <%= f.label :locked %>
+      <%= f.collection_select :locked, Bet.all, :id, :locked %>
+
+      <%= f.submit "Create new bet", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
