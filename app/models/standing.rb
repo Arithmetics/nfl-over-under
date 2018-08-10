@@ -3,7 +3,7 @@ class Standing < ApplicationRecord
 
 
   def games_left
-    82-games_played
+    16-games_played
   end
 
   def games_to_cross_goal(goal_pct)
@@ -33,9 +33,9 @@ class Standing < ApplicationRecord
 
 
   def required_record(goal_pct, selection)
-    remaining_games = 82-self.games_played
-    over_win_goal = ((goal_pct + 0.005) * 82 + 1).floor
-    under_win_goal = (goal_pct * 82 + 1).floor
+    remaining_games = 16-self.games_played
+    over_win_goal = ((goal_pct + 0.005) * 16 + 1).floor
+    under_win_goal = (goal_pct * 16 + 1).floor
     wins_to_get_over = over_win_goal - self.wins
     wins_to_get_under = under_win_goal - self.wins
     if selection == "over"
@@ -45,7 +45,7 @@ class Standing < ApplicationRecord
         result = "Team clinched under"
       else
         required_more_wins = over_win_goal - self.wins
-        max_more_losses = 82 -required_more_wins - self.games_played
+        max_more_losses = 16 -required_more_wins - self.games_played
         result = "#{required_more_wins} - #{max_more_losses}"
       end
     elsif selection == "under"
@@ -55,7 +55,7 @@ class Standing < ApplicationRecord
         result = "Team clinched under"
       else
         max_more_wins = under_win_goal - self.wins - 1
-        required_more_losses = 82 -max_more_wins - self.games_played
+        required_more_losses = 16 -max_more_wins - self.games_played
         result = "#{max_more_wins} - #{required_more_losses}"
       end
     end

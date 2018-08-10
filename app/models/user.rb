@@ -84,17 +84,19 @@ class User < ApplicationRecord
     self.picks.each do |pick|
       standing_status = Standing.where(team_name: pick.title).last.win_loss_pct
       standing_goal = Standing.where(team_name: "#{pick.title} Goal").last.win_loss_pct
-      if pick.selection == "over"
-        if standing_status > standing_goal && pick.super
-          points += 2
-        elsif standing_status > standing_goal
-          points += 1
-        end
-      elsif pick.selection == "under"
-        if standing_status < standing_goal && pick.super
-          points += 2
-        elsif standing_status < standing_goal
-          points += 1
+      if standing_status
+        if pick.selection == "over"
+          if standing_status > standing_goal && pick.super
+            points += 2
+          elsif standing_status > standing_goal
+            points += 1
+          end
+        elsif pick.selection == "under"
+          if standing_status < standing_goal && pick.super
+            points += 2
+          elsif standing_status < standing_goal
+            points += 1
+          end
         end
       end
     end

@@ -34,136 +34,143 @@ end
 
 
 
-Bet.create!(title: "Atlanta Hawks",
-            benchmark: 25.5,
+Bet.create!(title: "Dallas Cowboys",
+            benchmark: 8.5,
             locked: false)
 
 
-Bet.create!(title: "Boston Celtics",
-            benchmark: 55.5,
+Bet.create!(title: "New York Giants",
+            benchmark: 7,
             locked: false)
 
-Bet.create!(title: "Brooklyn Nets",
-            benchmark: 27.5,
+Bet.create!(title: "Philadelphia Eagles",
+            benchmark: 10.5,
             locked: true)
 
-Bet.create!(title: "Charlotte Hornets",
-            benchmark: 42.5,
-            locked: false)
-
-
-Bet.create!(title: "Chicago Bulls",
-            benchmark: 22,
-            locked: false)
-
-Bet.create!(title: "Cleveland Cavaliers",
-            benchmark: 53.5,
-            locked: true)
-
-
-Bet.create!(title: "Dallas Mavericks",
-            benchmark: 35.5,
-            locked: true)
-
-
-Bet.create!(title: "Denver Nuggets",
-            benchmark: 45.5,
+Bet.create!(title: "Washington Redskins",
+            benchmark: 7,
             locked: false)
 
 
-Bet.create!(title: "Detroit Pistons",
-            benchmark: 38.5,
+Bet.create!(title: "Chicago Bears",
+            benchmark: 6.5,
             locked: false)
 
-Bet.create!(title: "Golden State Warriors",
-            benchmark: 67.5,
+Bet.create!(title: "Detroit Lions",
+            benchmark: 7.5,
             locked: true)
 
-Bet.create!(title: "Houston Rockets",
-            benchmark: 55.5,
+
+Bet.create!(title: "Green Bay Packers",
+            benchmark: 10,
+            locked: true)
+
+
+Bet.create!(title: "Minnesota Vikings",
+            benchmark: 10,
             locked: false)
 
 
-Bet.create!(title: "Indiana Pacers",
-            benchmark: 31.5,
+Bet.create!(title: "Atlanta Falcons",
+            benchmark: 9,
             locked: false)
 
-Bet.create!(title: "Los Angeles Clippers",
-            benchmark: 43.5,
+Bet.create!(title: "Carolina Panthers",
+            benchmark: 9,
+            locked: true)
+
+Bet.create!(title: "New Orleans Saints",
+            benchmark: 9.5,
+            locked: false)
+
+
+Bet.create!(title: "Tampa Bay Buccaneers",
+            benchmark: 6.5,
+            locked: false)
+
+Bet.create!(title: "Los Angeles Rams",
+            benchmark: 10,
+            locked: true)
+
+Bet.create!(title: "San Francisco 49ers",
+            benchmark: 8.5,
+            locked: true)
+
+Bet.create!(title: "Arizona Cardinals",
+            benchmark: 5.5,
+            locked: true)
+
+Bet.create!(title: "Seattle Seahawks",
+            benchmark: 8,
+            locked: true)
+
+Bet.create!(title: "Buffalo Bills",
+            benchmark: 6,
+            locked: true)
+
+Bet.create!(title: "Miami Dolphins",
+            benchmark: 6.5,
             locked: true)
 
 
-Bet.create!(title: "Los Angeles Lakers",
-            benchmark: 33.5,
+Bet.create!(title: "New England Patriots",
+            benchmark: 11,
             locked: true)
 
-Bet.create!(title: "Memphis Grizzlies",
-            benchmark: 37.5,
-            locked: true)
-
-Bet.create!(title: "Miami Heat",
-            benchmark: 43.5,
+Bet.create!(title: "New York Jets",
+            benchmark: 6,
             locked: true)
 
 
-Bet.create!(title: "Milwaukee Bucks",
-            benchmark: 47.5,
+Bet.create!(title: "Baltimore Ravens",
+            benchmark: 8,
             locked: true)
 
-Bet.create!(title: "Minnesota Timberwolves",
-            benchmark: 48.5,
-            locked: true)
-
-
-Bet.create!(title: "New Orleans Pelicans",
-            benchmark: 39.5,
-            locked: true)
-
-Bet.create!(title: "New York Knicks",
-            benchmark: 30.5,
+Bet.create!(title: "Cincinnati Bengals",
+            benchmark: 6.5,
             locked: true)
 
 
-Bet.create!(title: "Oklahoma City Thunder",
-            benchmark: 50.5,
+Bet.create!(title: "Cleveland Browns",
+            benchmark: 5.5,
             locked: true)
 
-Bet.create!(title: "Orlando Magic",
-            benchmark: 33.5,
+Bet.create!(title: "Pittsburgh Steelers",
+            benchmark: 10.5,
             locked: true)
 
-Bet.create!(title: "Philadelphia 76ers",
-            benchmark: 41.5,
-            locked: true)
-
-
-Bet.create!(title: "Phoenix Suns",
-            benchmark: 29,
-            locked: true)
-
-Bet.create!(title: "Portland Trail Blazers",
-            benchmark: 42.5,
-            locked: true)
-
-Bet.create!(title: "Sacramento Kings",
-            benchmark: 27.5,
-            locked: true)
-
-Bet.create!(title: "San Antonio Spurs",
-            benchmark: 54.5,
+Bet.create!(title: "Houston Texans",
+            benchmark: 8.5,
             locked: true)
 
 
-Bet.create!(title: "Toronto Raptors",
-            benchmark: 48.5,
+Bet.create!(title: "Indianapolis Colts",
+            benchmark: 6.5,
             locked: true)
 
-Bet.create!(title: "Utah Jazz",
-            benchmark: 41,
+Bet.create!(title: "Jacksonville Jaguars",
+            benchmark: 9,
             locked: true)
 
-Bet.create!(title: "Washington Wizards",
-            benchmark: 48,
+Bet.create!(title: "Tennessee Titans",
+            benchmark: 8,
+            locked: true)
+
+Bet.create!(title: "Denver Broncos",
+            benchmark: 7,
+            locked: true)
+
+
+Bet.create!(title: "Kansas City Chiefs",
+            benchmark: 8.5,
+            locked: true)
+
+Bet.create!(title: "Los Angeles Chargers",
+            benchmark: 9.5,
+            locked: true)
+
+Bet.create!(title: "Oakland Raiders",
+            benchmark: 8,
             locked: true)
 
 
@@ -201,40 +208,44 @@ end
 
 
 team_names = [
-  "Atlanta Hawks",
-  "Boston Celtics",
-  "Brooklyn Nets",
-  "Charlotte Hornets",
-  "Chicago Bulls",
-  "Cleveland Cavaliers",
-  "Dallas Mavericks",
-  "Denver Nuggets",
-  "Detroit Pistons",
-  "Golden State Warriors",
-  "Houston Rockets",
-  "Indiana Pacers",
-  "Los Angeles Clippers",
-  "Los Angeles Lakers",
-  "Memphis Grizzlies",
-  "Miami Heat",
-  "Milwaukee Bucks",
-  "Minnesota Timberwolves",
-  "New Orleans Pelicans",
-  "New York Knicks",
-  "Oklahoma City Thunder",
-  "Orlando Magic",
-  "Philadelphia 76ers",
-  "Phoenix Suns",
-  "Portland Trail Blazers",
-  "Sacramento Kings",
-  "San Antonio Spurs",
-  "Toronto Raptors",
-  "Utah Jazz",
-  "Washington Wizards"
+  "Dallas Cowboys",
+  "New York Giants",
+  "Philadelphia Eagles",
+  "Washington Redskins",
+  "Chicago Bears",
+  "Detroit Lions",
+  "Green Bay Packers",
+  "Minnesota Vikings",
+  "Atlanta Falcons",
+  "Carolina Panthers",
+  "New Orleans Saints",
+  "Tampa Bay Buccaneers",
+  "Los Angeles Rams",
+  "San Francisco 49ers",
+  "Arizona Cardinals",
+  "Seattle Seahawks",
+  "Buffalo Bills",
+  "Miami Dolphins",
+  "New England Patriots",
+  "New York Jets",
+  "Baltimore Ravens",
+  "Cincinnati Bengals",
+  "Cleveland Browns",
+  "Pittsburgh Steelers",
+  "Houston Texans",
+  "Indianapolis Colts",
+  "Jacksonville Jaguars",
+  "Tennessee Titans",
+  "Denver Broncos",
+  "Kansas City Chiefs",
+  "Los Angeles Chargers",
+  "Oakland Raiders"
 ]
 
+
+# standings 
 team_names.each do |team|
-  54.times do |n|
+  6.times do |n|
     games_played = n
     if n == 0
       wins = 0
@@ -267,7 +278,7 @@ team_names.each do |team|
                      games_played: games_played,
                      wins: wins,
                      losses: losses,
-                     win_loss_pct: (@bets.find_by_title(team).benchmark.to_f / 82)
+                     win_loss_pct: (@bets.find_by_title(team).benchmark.to_f / 16)
                      )
 
 

@@ -20,21 +20,23 @@ class Pick < ApplicationRecord
       win = true
       standing_status = Standing.where(team_name: self.title).last.win_loss_pct
       standing_goal = Standing.where(team_name: "#{self.title} Goal").last.win_loss_pct
-      if self.selection == "over"
-        if standing_status > standing_goal && self.super
-          win = true
-        elsif standing_status > standing_goal
-          win = true
-        else
-          win = false
-        end
-      elsif self.selection == "under"
-        if standing_status < standing_goal && self.super
-          win = true
-        elsif standing_status < standing_goal
-          win = true
-        else
-          win = false
+      if standing_status
+        if self.selection == "over"
+          if standing_status > standing_goal && self.super
+            win = true
+          elsif standing_status > standing_goal
+            win = true
+          else
+            win = false
+          end
+        elsif self.selection == "under"
+          if standing_status < standing_goal && self.super
+            win = true
+          elsif standing_status < standing_goal
+            win = true
+          else
+            win = false
+          end
         end
       end
       win
