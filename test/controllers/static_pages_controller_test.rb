@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "NBA Over / Under Contest"
+    @base_title = "NFL Over / Under Contest"
   end
 
   test "should get home" do

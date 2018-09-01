@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: nba_app_production
+  channel_prefix: nfl_app_production

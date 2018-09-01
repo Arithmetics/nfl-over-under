@@ -205,3 +205,27 @@ footer .glyphicon {
   -webkit-box-sizing: border-box;
   box-sizing:         border-box;
 }
+
+
+.videoHolder {
+  top: 0;
+  left: 0;
+  position: fixed; 
+  z-index: -99; 
+  width: 100vw; 
+  height: 100vh;
+  background-color: black;
+}
+
+.jumbotron {
+  background-color:rgba(0, 0, 0, 0.5);
+
+  max-width: 550px;
+  padding: 0;
+
+  
+}
+
+.transparent {
+  background-color:rgba(0, 0, 0, 0.5) !important;
+}

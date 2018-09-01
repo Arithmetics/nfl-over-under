@@ -1,6 +1,6 @@
-# NBA Over / Under
+# NFL Over / Under
 
-Application I built to host a competition to pick NBA Over/Under win totals and follow standings over the course of the season.
+Application I built to host a competition to pick NFL Over/Under win totals and follow standings over the course of the season.
 
 Live website running at: https://bt-nba.herokuapp.com/ (Account will need to be created to login).
 
