@@ -1,4 +1,6 @@
 class StandingsController < ApplicationController
+  before_action :require_login
+
   def index
     @bets = Bet.all
     @standings = Standing.all
@@ -108,5 +110,11 @@ class StandingsController < ApplicationController
   end
 
   def show
+  end
+
+  def require_login
+    unless current_user
+      redirect_to root_url
+    end
   end
 end

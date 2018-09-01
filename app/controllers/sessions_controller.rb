@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)
         #the redirect_back_or is the sessions helper saying go where they were trying to go
         #or if they werent just go to the user profile
-        redirect_back_or user #same as redirect_to user_url(user) thru rails magic
+        redirect_back_or root_url #same as redirect_to user_url(user) thru rails magic
       else
         flash[:warning] = "Account not activated, check your email. Send to #{user.email}"
         redirect_to root_url
