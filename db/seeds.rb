@@ -40,15 +40,15 @@ Bet.create!(title: "Dallas Cowboys",
 
 
 Bet.create!(title: "New York Giants",
-            benchmark: 7,
+            benchmark: 7.5,
             locked: false)
 
 Bet.create!(title: "Philadelphia Eagles",
             benchmark: 10.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Washington Redskins",
-            benchmark: 7,
+            benchmark: 7.5,
             locked: false)
 
 
@@ -58,26 +58,26 @@ Bet.create!(title: "Chicago Bears",
 
 Bet.create!(title: "Detroit Lions",
             benchmark: 7.5,
-            locked: true)
+            locked: false)
 
 
 Bet.create!(title: "Green Bay Packers",
-            benchmark: 10,
-            locked: true)
+            benchmark: 10.5,
+            locked: false)
 
 
 Bet.create!(title: "Minnesota Vikings",
-            benchmark: 10,
+            benchmark: 10.5,
             locked: false)
 
 
 Bet.create!(title: "Atlanta Falcons",
-            benchmark: 9,
+            benchmark: 9.5,
             locked: false)
 
 Bet.create!(title: "Carolina Panthers",
-            benchmark: 9,
-            locked: true)
+            benchmark: 8.5,
+            locked: false)
 
 Bet.create!(title: "New Orleans Saints",
             benchmark: 9.5,
@@ -89,89 +89,89 @@ Bet.create!(title: "Tampa Bay Buccaneers",
             locked: false)
 
 Bet.create!(title: "Los Angeles Rams",
-            benchmark: 10,
-            locked: true)
+            benchmark: 10.5,
+            locked: false)
 
 Bet.create!(title: "San Francisco 49ers",
             benchmark: 8.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Arizona Cardinals",
             benchmark: 5.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Seattle Seahawks",
-            benchmark: 8,
-            locked: true)
+            benchmark: 7.5,
+            locked: false)
 
 Bet.create!(title: "Buffalo Bills",
-            benchmark: 6,
-            locked: true)
+            benchmark: 5.5,
+            locked: false)
 
 Bet.create!(title: "Miami Dolphins",
             benchmark: 6.5,
-            locked: true)
+            locked: false)
 
 
 Bet.create!(title: "New England Patriots",
-            benchmark: 11,
-            locked: true)
+            benchmark: 11.5,
+            locked: false)
 
 Bet.create!(title: "New York Jets",
-            benchmark: 6,
-            locked: true)
+            benchmark: 5.5,
+            locked: false)
 
 
 Bet.create!(title: "Baltimore Ravens",
-            benchmark: 8,
-            locked: true)
+            benchmark: 8.5,
+            locked: false)
 
 Bet.create!(title: "Cincinnati Bengals",
             benchmark: 6.5,
-            locked: true)
+            locked: false)
 
 
 Bet.create!(title: "Cleveland Browns",
             benchmark: 5.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Pittsburgh Steelers",
             benchmark: 10.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Houston Texans",
             benchmark: 8.5,
-            locked: true)
+            locked: false)
 
 
 Bet.create!(title: "Indianapolis Colts",
             benchmark: 6.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Jacksonville Jaguars",
-            benchmark: 9,
-            locked: true)
+            benchmark: 9.5,
+            locked: false)
 
 Bet.create!(title: "Tennessee Titans",
-            benchmark: 8,
-            locked: true)
+            benchmark: 7.5,
+            locked: false)
 
 Bet.create!(title: "Denver Broncos",
-            benchmark: 7,
-            locked: true)
+            benchmark: 7.5,
+            locked: false)
 
 
 Bet.create!(title: "Kansas City Chiefs",
             benchmark: 8.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Los Angeles Chargers",
             benchmark: 9.5,
-            locked: true)
+            locked: false)
 
 Bet.create!(title: "Oakland Raiders",
-            benchmark: 8,
-            locked: true)
+            benchmark: 7.5,
+            locked: false)
 
 
 #set up variables
