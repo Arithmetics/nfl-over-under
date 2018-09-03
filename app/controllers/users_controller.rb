@@ -26,8 +26,8 @@ class UsersController < ApplicationController
     #defined below in the private section (user_params)
     @user = User.new(user_params)
     if @user.save
-      @user.send_activation_email #model
-      flash[:info] = "Please check your email to activate your account."
+      flash.now[:alert] = 'Welcome!'
+      log_in(@user)
       redirect_to root_url
     else
       render 'new'
