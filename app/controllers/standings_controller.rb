@@ -105,7 +105,7 @@ class StandingsController < ApplicationController
           @utah = [@utah_results, @utah_goals],
           @washington = [@washington_results, @washington_goals],
           @nfl = [@extra_nfl_results, @extra_nfl_goals],
-          @nfl2 = [@another_nfl_results, @extra_nfl_goals]
+          @nfl2 = [@another_nfl_results, @another_nfl_goals]
         ]
   end
 
