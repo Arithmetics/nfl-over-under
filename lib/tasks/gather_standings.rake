@@ -49,9 +49,19 @@ task :fetch_standings => :environment do
   wins = []
   ties = []
   
-  rows = page.css(".Table2__tbody")[1].css("tr")
+  rows1 = page.css(".Table2__tbody")[1].css("tr")
+  rows1 = page.css(".Table2__tbody")[3].css("tr")
   
-  rows.each_with_index do |row, index|
+  rows1.each_with_index do |row, index|
+    if index != 0 && row.css("td")[0].text != "W"
+      columns = row.css("td")
+      wins.push(columns[0].text.to_i)
+      losses.push(columns[1].text.to_i)
+      ties.push(columns[2].text.to_i)
+    end
+  end
+
+  rows2.each_with_index do |row, index|
     if index != 0 && row.css("td")[0].text != "W"
       columns = row.css("td")
       wins.push(columns[0].text.to_i)
