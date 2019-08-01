@@ -64,9 +64,12 @@ task :fetch_standings => :environment do
 
   ids.each do |id|
     if Standing.where(team_name: team_names[id], games_played: (wins[id]+losses[id]+ties[id])).empty?
-       #create standing value
-       total_games = wins[id]+losses[id]+ties[id]
-       win_loss_pct = (wins[id].to_f / total_games.to_f).round(3)
+      #create standing value
+      total_games = wins[id]+losses[id]+ties[id]
+      win_loss_pct = 0
+      if total_games != 0
+        win_loss_pct = (wins[id].to_f / total_games.to_f).round(3)
+      end
 
        Standing.create!(
          team_name: team_names[id], games_played: (wins[id]+losses[id]+ties[id]),
