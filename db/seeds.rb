@@ -40,7 +40,7 @@ Bet.create!(title: "Dallas Cowboys",
 
 
 Bet.create!(title: "New York Giants",
-            benchmark: 7.5,
+            benchmark: 5.5,
             locked: false)
 
 Bet.create!(title: "Philadelphia Eagles",
@@ -48,39 +48,39 @@ Bet.create!(title: "Philadelphia Eagles",
             locked: false)
 
 Bet.create!(title: "Washington Redskins",
-            benchmark: 7.5,
+            benchmark: 5.5,
             locked: false)
 
 
 Bet.create!(title: "Chicago Bears",
-            benchmark: 6.5,
+            benchmark: 9.5,
             locked: false)
 
 Bet.create!(title: "Detroit Lions",
-            benchmark: 7.5,
+            benchmark: 6.5,
             locked: false)
 
 
 Bet.create!(title: "Green Bay Packers",
-            benchmark: 10.5,
+            benchmark: 9.5,
             locked: false)
 
 
 Bet.create!(title: "Minnesota Vikings",
-            benchmark: 10.5,
+            benchmark: 8.5,
             locked: false)
 
 
 Bet.create!(title: "Atlanta Falcons",
-            benchmark: 9.5,
-            locked: false)
-
-Bet.create!(title: "Carolina Panthers",
             benchmark: 8.5,
             locked: false)
 
+Bet.create!(title: "Carolina Panthers",
+            benchmark: 7.5,
+            locked: false)
+
 Bet.create!(title: "New Orleans Saints",
-            benchmark: 9.5,
+            benchmark: 10.5,
             locked: false)
 
 
@@ -101,15 +101,15 @@ Bet.create!(title: "Arizona Cardinals",
             locked: false)
 
 Bet.create!(title: "Seattle Seahawks",
-            benchmark: 7.5,
+            benchmark: 8.5,
             locked: false)
 
 Bet.create!(title: "Buffalo Bills",
-            benchmark: 5.5,
+            benchmark: 7.5,
             locked: false)
 
 Bet.create!(title: "Miami Dolphins",
-            benchmark: 6.5,
+            benchmark: 4.5,
             locked: false)
 
 
@@ -118,7 +118,7 @@ Bet.create!(title: "New England Patriots",
             locked: false)
 
 Bet.create!(title: "New York Jets",
-            benchmark: 5.5,
+            benchmark: 7.5,
             locked: false)
 
 
@@ -127,16 +127,16 @@ Bet.create!(title: "Baltimore Ravens",
             locked: false)
 
 Bet.create!(title: "Cincinnati Bengals",
-            benchmark: 6.5,
+            benchmark: 5.5,
             locked: false)
 
 
 Bet.create!(title: "Cleveland Browns",
-            benchmark: 5.5,
+            benchmark: 9.5,
             locked: false)
 
 Bet.create!(title: "Pittsburgh Steelers",
-            benchmark: 10.5,
+            benchmark: 9.5,
             locked: false)
 
 Bet.create!(title: "Houston Texans",
@@ -145,11 +145,11 @@ Bet.create!(title: "Houston Texans",
 
 
 Bet.create!(title: "Indianapolis Colts",
-            benchmark: 6.5,
+            benchmark: 9.5,
             locked: false)
 
 Bet.create!(title: "Jacksonville Jaguars",
-            benchmark: 9.5,
+            benchmark: 7.5,
             locked: false)
 
 Bet.create!(title: "Tennessee Titans",
@@ -162,7 +162,7 @@ Bet.create!(title: "Denver Broncos",
 
 
 Bet.create!(title: "Kansas City Chiefs",
-            benchmark: 8.5,
+            benchmark: 10.5,
             locked: false)
 
 Bet.create!(title: "Los Angeles Chargers",
@@ -170,7 +170,7 @@ Bet.create!(title: "Los Angeles Chargers",
             locked: false)
 
 Bet.create!(title: "Oakland Raiders",
-            benchmark: 7.5,
+            benchmark: 5.5,
             locked: false)
 
 
