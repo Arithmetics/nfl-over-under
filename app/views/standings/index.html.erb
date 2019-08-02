@@ -61,7 +61,7 @@
         <div class="panel-body">
           <%= line_chart [
                   {name: "Results", data: team[0].group(:games_played).sum(:win_loss_pct)},
-                  {name: "Goal", data: team[1].group(:games_played).sum(:win_loss_pct)} ], discrete: true, min: 0, max: 1%>
+                  {name: "Goal", data: team[1].group(:games_played).sum(:win_loss_pct)} ], discrete: true, min: 0, max: 1, library: {backgroundColor: "#181E24", labels: { fontColor: "#fff" }, colors: ["#D83919", "#2c99b7"]}%>
 
         </div>
       </div>

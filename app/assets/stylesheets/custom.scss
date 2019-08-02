@@ -6,10 +6,12 @@
 
 body {
   padding-top: 60px;
+  background-color: #1D252C;
+  color: rgb(194, 206, 218);
 }
 
 .glyphicon {
-  color: white;
+  color: white !important;
 }
 
 
@@ -35,6 +37,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
+  color: rgb(194, 206, 218);
 }
 
 h1 {
@@ -50,7 +53,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+
 }
 
 p {
@@ -234,4 +237,47 @@ footer .glyphicon {
 
 .transparent {
   background-color:rgba(0, 0, 0, 0.5) !important;
+}
+
+.panel {
+  background-color: #181E24;
+}
+
+.well {
+  background-color: #181E24;
+}
+
+.list-group {
+  background-color: #181E24 !important;
+
+  .list-group-item {
+    background-color: #181E24 !important;
+  }
+}
+
+.panel-heading {
+  background-color: #181E24 !important;
+  color: rgb(194, 206, 218);
+}
+
+.panel-body {
+  background-color: #181E24 !important;
+  color: rgb(194, 206, 218);
+}
+
+.nav-pills {
+  background-color: #181E24 !important;
+  color: rgb(194, 206, 218);
+}
+
+.info {
+  background-color: rgb(44, 101, 116) !important;
+}
+
+.success {
+  background-color: #3b722b !important;
+}
+
+.danger {
+  background-color: #5a082d !important;
 }
