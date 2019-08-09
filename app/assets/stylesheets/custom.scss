@@ -14,6 +14,38 @@ body {
   color: white !important;
 }
 
+.main-page-background {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-image: image-url("main-banner.png");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin-top: -10px;
+}
+
+.bottom-transparent {
+  background-color: transparent;
+}
+
+.cool-panel {
+  border-radius: 9px;
+  opacity: .9;
+
+  .panel-heading {
+    height: 48px !important;
+    border-radius: 9px 9px 0 0 !important;
+  }
+
+  .panel-body {
+    border-radius: 0px 0px 9px 9px !important;
+  }
+
+  h3 {
+    margin: 3px !important;
+  };
+}
 
 
 section {
@@ -227,8 +259,8 @@ footer .glyphicon {
 }
 
 .jumbotron {
-  background-color:rgba(0, 0, 0, 0.5);
-
+  background-color:transparent;
+  margin: 100px auto;
   max-width: 550px;
   padding: 0;
 

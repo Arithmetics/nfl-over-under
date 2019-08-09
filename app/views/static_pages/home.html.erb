@@ -1,38 +1,39 @@
 
+<div class="main-page-background">
 
 
-
-<div class="center jumbotron">
-
-
-  <div class="container">
-    <h2 id="home-header">NFL Over / Under Contest</h2>
-<% if current_user == nil %>
-  <%= button_to "Create an account", signup_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
-  <br>
-  <br>
-  <%= button_to "Login", login_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
-  <br>
-  <div>
-</div>
+  <div class="center jumbotron">
 
 
-
-<% else %>
-
-<div class="panel panel-default">
-  <div class="panel-heading"><h3>Rules</h3></div>
-  <div class="panel-body">
-    <ol class="list-group">
-      <li class="list-group-item">Pick exactly 10 teams</li>
-      <li class="list-group-item">Specify whether they will go over or under their season total</li>
-      <li class="list-group-item">Pick exactly 5 "Super Bets"</li>
-      <li class="list-group-item">Regular Bets count for one point, Super Bets count for two points</li>
-      <li class="list-group-item">Picks are editable and secret until NFL season begins</li>
-      <li class="list-group-item"><%= button_to "Get Started Here!", bets_path, :class => "btn btn-success btn-lg btn-block", :method => :get %></li>
-    </ol>
+    <div class="container">
+  <% if current_user == nil %>
+    <%= button_to "Create an account", signup_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
+    <br>
+    <br>
+    <%= button_to "Login", login_path, :class => "btn btn-lg btn-primary btn-lg btn-block", :method => :get %>
+    <br>
+    <div>
   </div>
+
+
+
+  <% else %>
+
+  <div class="panel panel-default cool-panel">
+    <div class="panel-heading"><h3>Rules</h3></div>
+    <div class="panel-body">
+      <ol class="list-group">
+        <li class="list-group-item">Pick exactly 10 teams</li>
+        <li class="list-group-item">Specify whether they will go over or under their season total</li>
+        <li class="list-group-item">Pick exactly 5 "Super Bets"</li>
+        <li class="list-group-item">Regular Bets count for one point, Super Bets count for two points</li>
+        <li class="list-group-item">Picks are editable and secret until NFL season begins</li>
+        <li class="list-group-item"><%= button_to "Get Started Here", bets_path, :class => "btn btn-success btn-lg btn-block", :method => :get %></li>
+      </ol>
+    </div>
+  </div>
+
+
+  <% end %>
+
 </div>
-
-
-<% end %>
