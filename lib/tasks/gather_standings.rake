@@ -49,8 +49,8 @@ task :fetch_standings => :environment do
   wins = []
   ties = []
   
-  rows1 = page.css(".Table2__tbody")[1].css("tr")
-  rows2 = page.css(".Table2__tbody")[3].css("tr")
+  rows1 = page.css(".Table__TBODY")[1].css("tr")
+  rows2 = page.css(".Table2__TBODY")[3].css("tr")
   
   rows1.each_with_index do |row, index|
     if index != 0 && row.css("td")[0].text != "W"
