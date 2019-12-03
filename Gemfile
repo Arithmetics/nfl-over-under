@@ -11,7 +11,7 @@ gem 'jbuilder',     '2.7.0'
 gem 'bootstrap-sass', '3.3.7'
 gem 'bcrypt',         '3.1.11'
 gem 'faker',          '1.7.3'
-gem 'chartkick', '~> 1.2.4'
+gem 'chartkick', '~> 3.3.0'
 gem 'active_median', '~> 0.1.0'
 
 group :development, :test do
